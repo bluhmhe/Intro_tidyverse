@@ -35,14 +35,17 @@ library(downloader)
 library(rgbif)
 
 ## Spatial packages
-#install.packages(c("rgdal", "sp", "sf", "raster", "rnaturalearth"))
+#install.packages(c("rgdal", "sp", "sf", "raster", "rnaturalearth", "cowplot", "magick"))
 library(rgdal)
 library(sp)
 library(sf)
 library(raster)
 library(rnaturalearth)
+library(cowplot)
+library(magick)
 
-#save temporary files
+#set directory where temporary files are saved
+write("TMPDIR = _tmp", file=file.path(Sys.getenv('R_USER'), '.Renviron'))
 rasterOptions(tmpdir="_tmp")
 ```
 
